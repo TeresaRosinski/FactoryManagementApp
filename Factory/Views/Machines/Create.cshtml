@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<div class= jumbotron>
+  <h2 class = "display-5"> Add A New Machine </h2>
+</div>
+
+
+@using (Html.BeginForm())
+{
+   <div class="form-group">
+    <label>Name</label>
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control"})
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    @Html.TextBoxFor(model => model.Description, new { @class = "form-control"})
+  </div>
+  <div class="form-group">
+    <label>Date Purchased</label><br>
+    @Html.EditorFor(model => model.DatePurchased, new { @class = "form-control"})<br>
+  </div>
+  <input type="submit" class="btn btn-default" value="Add" />  
+}
+

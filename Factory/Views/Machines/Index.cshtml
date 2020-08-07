@@ -1,5 +1,5 @@
 @{
-  Layout="_Layout"
+  Layout="_Layout";
 }
 @using Factory.Models; 
 @model List<Factory.Models.Machine>; 
@@ -35,3 +35,5 @@
       }
   </tbody>
 </table>
+
+<button class = "btn btn-default">@Html.ActionLink("Add A New Machine","Create")</button>
