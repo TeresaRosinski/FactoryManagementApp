@@ -1,0 +1,44 @@
+@{
+  Layout="_Layout";
+}
+@using Factory.Models; 
+@model List<Factory.Models.Engineer>; 
+
+<div class = "jumbotron"> 
+  <h1 class="display-3"> All Current Engineers </h1> 
+</div>
+
+@if (@Model.Count == 0 )
+{
+  <h2>No Engineers Are Currently In The Databse</h2>
+}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Date Hired</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scopre="col">Delete</th>
+      <th scope="col">Edit</th>      
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(Engineer engineer in Model)
+      {
+      <tr class="table-default">
+        <th scope="row">@Html.ActionLink(@engineer.Name, "Details", new {id = engineer.EngineerId})</th>
+        <td>@engineer.Department</td>
+        <td>@engineer.DateHired</td>
+        <td>@engineer.Email</td>
+        <td>@engineer.Phone</td>
+        <td>@Html.ActionLink($"Delete", "Delete", new {id = engineer.EngineerId})</td>
+        <td>@Html.ActionLink($"Edit", "Edit", new {id = engineer.EngineerId})</td>
+    </tr>
+      }
+  </tbody>
+</table>
+
+<button class = "btn btn-default">@Html.ActionLink("Add A New Engineer","Create")</button>
