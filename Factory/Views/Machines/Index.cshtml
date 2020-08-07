@@ -27,7 +27,7 @@
     @foreach(Machine machine in Model)
       {
       <tr class="table-default">
-        <th scope="row">@machine.Name</th>
+        <th scope="row">@Html.ActionLink(@machine.Name, "Details", new {id = machine.MachineId})</th>
         <td>@machine.Description</td>
         <td>@machine.DatePurchased</td>
         <td>@Html.ActionLink($"Delete", "Delete", new {id = machine.MachineId})</td>

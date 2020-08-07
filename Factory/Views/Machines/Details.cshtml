@@ -1,12 +1,12 @@
 @{
-  Layout = "_Layout"
+  Layout = "_Layout";
 }
 
 @model Factory.Models.Machine; 
 
 <div class="jumbotron">
-  <h3 class="display-3">Machine Details</h3>
-  <h4 class="display-4">@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h4>
+  <h3>Machine Details</h3>
+  <h4>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h4>
 </div>
 
 @if(@Model.Engineers.Count ==0)
@@ -15,7 +15,7 @@
 }
 else
   {
-  <h3 class="display-3">Engineers for This Machine:</h3>
+  <h3>Engineers for This Machine:</h3>
   @foreach(var join in Model.Engineers)
   {
   <li>@join.Engineer.Name  | @Html.ActionLink("Edit Machine", "Edit", new {id=Model.MachineId}) |</li>
