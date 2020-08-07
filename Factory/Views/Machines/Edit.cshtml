@@ -12,8 +12,14 @@
 {
     @Html.HiddenFor(model => model.MachineId)
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+     @Html.LabelFor(model => model.Name)
+      @Html.EditorFor(model => model.Name) <br>
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description) <br>
+
+    @Html.LabelFor(model => model.DatePurchased)
+    @Html.EditorFor(model => model.DatePurchased)
 
     <input type="submit" value="Save" />
 }

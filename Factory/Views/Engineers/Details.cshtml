@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer; 
+
+<div class="jumbotron">
+  <h3>Engineer Details</h3>
+  <h4>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h4>
+</div>
+
+@if(@Model.Machines.Count ==0)
+{ 
+  <h3>This Engineer Has No Machines They are Licensed To Repair.</h3>
+}
+else
+  {
+  <h3>Machines this Engineer is Licensed to Run:</h3>
+  @foreach(var join in Model.Machines)
+  {
+  <li>@join.Machine.Name  | @Html.ActionLink("Edit Engineer", "Edit", new {id=Model.EngineerId}) |</li>
+  } 
+}
+<button>@Html.ActionLink("Add a Machine", "AddMachine", new { id = Model.EngineerId })</button>
+
+
+

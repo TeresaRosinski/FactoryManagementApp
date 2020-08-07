@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<div class= jumbotron>
+  <h2 class = "display-5"> Add A New Engineer </h2>
+</div>
+
+
+@using (Html.BeginForm())
+{
+   <div class="form-group">
+    <label>Name</label>
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control"})
+  </div>
+  <div class="form-group">
+    <label>Department</label>
+    @Html.TextBoxFor(model => model.Department, new { @class = "form-control"})
+  </div>
+  <div class="form-group">
+    <label>Date Hired</label><br>
+    @Html.EditorFor(model => model.DateHired, new { @class = "form-control"})<br>
+  </div>
+   <div class="form-group">
+    <label>Email</label>
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control"})
+  </div>
+   <div class="form-group">
+    <label>Phone</label>
+    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control"})
+  </div>
+  <input type="submit" class="btn btn-default" value="Add" />  
+}
+
+<button class = "btn btn-default">@Html.ActionLink("Back", "Index")</button>

@@ -68,7 +68,7 @@ namespace Factory.Controllers
 
     public ActionResult Delete (int id)
     {
-      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineereId ==id);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId ==id);
       return View(thisEngineer);
     }
 
