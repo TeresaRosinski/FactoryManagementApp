@@ -41,5 +41,6 @@ namespace Factory.Controllers
         .FirstOrDefault(machine => machine.MachineId == id);
      return View (thisMachine);  
     }
+    
   }
 }
