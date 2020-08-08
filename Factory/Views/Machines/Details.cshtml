@@ -16,10 +16,10 @@ else
   <h3>Engineers for This Machine:</h3>
   @foreach(var join in Model.Engineers)
   {
-  <p>@join.Engineer.Name  | @Html.ActionLink("Remove Engineer From Machine", "DeleteEngineer") |</p>
+  <p>@join.Engineer.Name  | @Html.ActionLink("Remove Engineer From Machine", "DeleteEngineer", new { id = Model.MachineId }) |</p>
   } 
 }
 
-<button class ="btn btn-secondary">@Html.ActionLink("Add an Engineer", "AddEngineer", new { id = Model.MachineId })</button>
+<button class ="btn btn-secondary">@Html.ActionLink("Add Engineer To Machine", "AddEngineer", new { id = Model.MachineId })</button>
 
 
