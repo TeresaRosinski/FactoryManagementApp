@@ -5,9 +5,9 @@
 @model Factory.Models.Engineer
 @using Factory.Models; 
 
-<h2>Add a Machine</h2>
-
-<h4>Add an Machine to This Engineer: @Html.DisplayFor(model => model.Name)</h4>
+<div class = "jumbotron"> 
+  <h2 class="display-4"> Add Machine To: @Html.DisplayFor(model => model.Name) </h2> 
+</div>
 
 @using (Html.BeginForm())
 {

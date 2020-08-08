@@ -3,10 +3,8 @@
 }
 
 @model Factory.Models.Machine; 
-
 <div class="jumbotron">
-  <h3>Machine Details</h3>
-  <h4>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h4>
+  <h3 class="display-4">Machine Details For: @Html.DisplayFor(model => model.Name) </h3>
 </div>
 
 @if(@Model.Engineers.Count ==0)
@@ -18,10 +16,10 @@ else
   <h3>Engineers for This Machine:</h3>
   @foreach(var join in Model.Engineers)
   {
-  <li>@join.Engineer.Name  | @Html.ActionLink("Edit Machine", "Edit", new {id=Model.MachineId}) |</li>
+  <p>@join.Engineer.Name  | @Html.ActionLink("Remove Engineer From Machine", "DeleteEngineer") |</p>
   } 
 }
 
-<button>@Html.ActionLink("Add an Engineer", "AddEngineer", new { id = Model.MachineId })</button>
+<button class ="btn btn-secondary">@Html.ActionLink("Add an Engineer", "AddEngineer", new { id = Model.MachineId })</button>
 
 

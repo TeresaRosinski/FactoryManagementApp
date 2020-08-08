@@ -14,13 +14,13 @@ body, html {
   background-size: cover;
   position: relative;
 }
-.engineer{
+.engineer {
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("engineer.jpg");
-  height: 40%;
-  width:auto; 
+  height: 100%; 
   background-position: center; 
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
+
 
