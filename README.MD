@@ -5,7 +5,6 @@
 #### By _**Teresa Rosinski**_
 
 
-
 # Setup/Installation Requirements
 
 * to clone this content, copy the url provided by the 'clone or download' button in GitHub
@@ -16,6 +15,10 @@
 * type dotnet build in the command line to compile the code
 * create a .gitignore file and store the bin and obj folders in .gitignore
 * type dotnet run in the command line to run the program
+
+# Importing and Updating the Database
+
+* MySql must be isntalled on your device
 * to connect the database type in the command line: dotnet ef migrations add Initial 
 * to update the database type in the command line: dotnet ef database update    
 
@@ -69,16 +72,6 @@ CREATE TABLE `Machines` (
 
 ```
 
-# Importing teresa_rosinski Database (As taken from LearnHowToProgram.com)
-
-#### In the Navigator > Administration window, select Data Import/Restore.
-#### In Import Options select Import from Self-Contained File.
-#### Navigate to the file we just created.
-#### Under Default Schema to be Imported To, select the New button.
-#### Enter the name of your database 
-#### Click Ok.
-#### Click Start Import.
-#### Reopen the Navigator > Schemas tab. Right click and select Refresh All. Our new test database will appear.
 
 # Specs
 | Spec | Input | Output |
