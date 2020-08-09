@@ -18,11 +18,11 @@ else
   <legend>Machines this Engineer is Licensed to Run:</legend>
   @foreach(var join in Model.Machines)
   {
-  <p>@join.Machine.Name  | @Html.ActionLink("Edit Engineer", "Edit", new {id=Model.EngineerId}) |</p>
-  } 
+    <p>@join.Machine.Name @using (Html.BeginForm("DeleteMachine", "Engineers")){@Html.Hidden("joinId", @join.MachineEngineerId)<input type="submit" value="Delete"/>}</p>
+  }
 }
 <br> 
-<button class = "btn btn-secondary">@Html.ActionLink("Add A Machine To The Database", "create", "machine")</button>
+<button class = "btn btn-secondary">@Html.ActionLink("Add A Machine To The Database", "Create", "Machines")</button>
 
 
 

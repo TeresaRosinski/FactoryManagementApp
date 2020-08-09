@@ -17,25 +17,25 @@
   <thead>
     <tr>
       <th scope="col">Name</th>
+      <th scope="col">Licensed Machines</th>
       <th scope="col">Department</th>
       <th scope="col">Date Hired</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
-      <th scopre="col">Delete</th>
-      <th scope="col">Edit</th>      
+      <th scopre="col">Delete</th>     
     </tr>
   </thead>
   <tbody>
     @foreach(Engineer engineer in Model)
       {
       <tr class="table-default">
-        <th scope="row">@Html.ActionLink(@engineer.Name, "Details", new {id = engineer.EngineerId})</th>
+        <th scope="row">@engineer.Name</th>
+        <td>@Html.ActionLink("Machines", "Details", new {id = engineer.EngineerId})</td>
         <td>@engineer.Department</td>
         <td>@engineer.DateHired</td>
         <td>@engineer.Email</td>
         <td>@engineer.Phone</td>
         <td>@Html.ActionLink($"Delete", "Delete", new {id = engineer.EngineerId})</td>
-        <td>@Html.ActionLink($"Edit", "Edit", new {id = engineer.EngineerId})</td>
     </tr>
       }
   </tbody>

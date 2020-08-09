@@ -106,6 +106,6 @@ namespace Factory.Controllers
       _db.MachineEngineer.Remove(joinEntry);
       _db.SaveChanges();
       return RedirectToAction("Index");
-  }
-  }
+    }
+}
 }
