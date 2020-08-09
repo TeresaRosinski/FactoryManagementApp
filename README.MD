@@ -18,9 +18,9 @@
 
 # Importing and Updating the Database
 
-* MySql must be isntalled on your device
-* to connect the database type in the command line: dotnet ef migrations add Initial 
-* to update the database type in the command line: dotnet ef database update    
+* MySql must be installed on your device
+* To connect the database type in the command line: dotnet ef migrations add Initial 
+* To update the database type in the command line: dotnet ef database update    
 
 
 # SQL Schema Query #
@@ -82,6 +82,8 @@ CREATE TABLE `Machines` (
 | **Program only allows the user to delete specific instances of machines** | "N/A" | "N/A"  |
 | **Program allows the user to connect an infinite number of machines with different engineers** | "N/A" | "N/A"  |
 | **Program only allows user to connect an infinite number of engineers with different machines** | "N/A" | "N/A"  |
+| **Program only allows user to delete an engineer different machines** | "N/A" | "N/A"  |
+| **Program only allows user to delete a machine different engineers** | "N/A" | "N/A"  |
 
 # Support and contact details
 
