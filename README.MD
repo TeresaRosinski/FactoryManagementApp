@@ -4,6 +4,9 @@
 
 #### By _**Teresa Rosinski**_
 
+# Description
+
+This is a C# app that allows a user to add Engineers and Machines to a databse. It utilizes a many-to-many relationship between Engineers and Machines.
 
 # Setup/Installation Requirements
 
